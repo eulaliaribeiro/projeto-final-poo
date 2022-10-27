@@ -2,9 +2,9 @@
 Criar classe Pai chamada Midia
 
 Atributos:
-- codigo : String
-- preco : Double
-- nome : String
+- codigo: String
+- preco: Double
+- nome: String
 
 Métodos:
 - darPlay()
@@ -49,5 +49,14 @@ public class Midia {
 
     public void darPlay(){
         System.out.println("A mídia começou a ser reproduzida!");
+    }
+
+    @Override
+    public String toString() {
+        return "Mídia {" +
+                "Código: " + codigo + '\n' +
+                "Preço: " + preco + '\n' +
+                "Nome: " + nome + '\n' +
+                '}';
     }
 }
