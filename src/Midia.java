@@ -55,6 +55,6 @@ public class Midia {
     public String toString() {
         return "Código: " + codigo + '\n' +
                 "Preço: R$ " + preco + '\n' +
-                "Nome: '" + nome + "'\n";
+                "Nome: " + nome + '\n';
     }
 }

@@ -1,5 +1,3 @@
-package JV002_POO.I.Tarefas.Locadora;
-
 import java.util.Random;
 
 /* Criar classe DoacaoMidia
@@ -13,9 +11,9 @@ import java.util.Random;
 public class DoacaoMidia {
     public static void main(String[] args) {
 
-        System.out.println("Vamos testar 5 mídias aleatoriamente para ver se estão funcionando?");
+        System.out.println("Vamos testar 5 mídias aleatoriamente para ver se o sistema está funcionando?");
 
-        for (int i = 1; i < 6; i++) {
+        for (int i = 0; i <= 4; i++) {
             Midia midia = pegarMidiaAleatoria();
             System.out.println("\n" + i + ") Mídia sorteada:");
             System.out.println(midia);
@@ -23,7 +21,7 @@ public class DoacaoMidia {
         }
 
         //Teste Assistir Filme:
-        System.out.println("\nO DVD abaixo foi selecionado para testarmos uma nova legenda:");
+        System.out.println("\nO DVD abaixo foi selecionado para testarmos uma nova legenda: ");
         Dvd dvd1 = new Dvd("DVD_01", 5.50, "Métodos", "Português", false, "N/A");
         assisitirFilme(dvd1);
     }
@@ -31,11 +29,17 @@ public class DoacaoMidia {
     public static Midia pegarMidiaAleatoria() {
         //Biblioteca
         Dvd dvd1 = new Dvd("DVD_01", 5.50, "Métodos", "Português", false, "N/A");
-        Dvd dvd2 = new Dvd("DVD_02", 6d, "Atributos", "Inglês", true, "Português");
-        Cd cd1 = new Cd("CD_01", 2d, "Herança", "Ada", 10);
-        Cd cd2 = new Cd("CD_02", 3d, "Polimorfismo", "Lovelace", 20);
+        Dvd dvd2 = new Dvd("DVD_02", 4d, "Atributos", "Inglês", true, "Português");
+        Dvd dvd3 = new Dvd("DVD_03", 8d, "Classes", "Alemão", true, "Português");
+        Dvd dvd4 = new Dvd("DVD_04", 13d, "POO", "Francês", false, "N/A");
+        Dvd dvd5 = new Dvd("DVD_05", 9d, "Instâncias", "Francês", false, "N/A");
+        Cd cd1 = new Cd("CD_01", 2d, "Herança", "Ada Lovelace", 10);
+        Cd cd2 = new Cd("CD_02", 9.5d, "Polimorfismo", "Carol Shaw", 13);
+        Cd cd3 = new Cd("CD_03", 7d, "Objetos", "Grace Hooper", 11);
+        Cd cd4 = new Cd("CD_04", 8d, "Encapsulamento", "Frances Allen", 20);
+        Cd cd5 = new Cd("CD_05", 11.5d, "Construtores", "Roberta Williams", 18);
 
-        Midia[] midias = {dvd1, dvd2, cd1, cd2};
+        Midia[] midias = {dvd1, dvd2, dvd3, dvd4, dvd5, cd1, cd2, cd3, cd4, cd5};
         Random sorteio = new Random();
         int numeroSorteado = sorteio.nextInt(midias.length);
         return midias[numeroSorteado];

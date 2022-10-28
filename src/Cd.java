@@ -1,11 +1,9 @@
-package JV002_POO.I.Tarefas.Locadora;
-
 /*
 Criar classe Filha chamada CD
     *
     * Atributos:
-    - artista : String
-    - quantidadeFaixas : int
+    - artista: String
+    - quantidadeFaixas: int
     *
     * Métodos
     - sobrescrever darPlay(): exibir a mensagem "Primeira faixa tocando"
