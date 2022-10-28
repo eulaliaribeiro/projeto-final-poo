@@ -58,18 +58,27 @@ public class Dvd extends Midia{
     public void legenda(boolean ligar, String idiomaLegenda){
         setPossuiLegenda(ligar);
         setIdiomaLegenda(idiomaLegenda);
+        if (ligar == true) {
+            System.out.println("A legenda em " + idiomaLegenda + " foi ativada!");
+        } else {
+            System.out.println("A legenda em " + idiomaLegenda + " foi incluída, mas está desativada!");
+        }
     }
 
     public void legenda(boolean ligarDesligar){
         setPossuiLegenda(ligarDesligar);
+        if (ligarDesligar == true) {
+            System.out.println("A legenda em " + getIdiomaLegenda() + " foi ativada!");
+        } else {
+            System.out.println("A legenda em " + getIdiomaLegenda() + " foi desativada!");
+        }
     }
 
     @Override
     public String toString() {
-        return super.toString() + "Dvd {" +
+        return "DVD\n" + super.toString() +
                 "Idioma: " + idioma + '\n' +
                 "Possui legenda? " + possuiLegenda + '\n' +
-                "Idioma da legenda: " + idiomaLegenda + '\n' +
-                '}';
+                "Idioma da legenda: " + idiomaLegenda;
     }
 }
